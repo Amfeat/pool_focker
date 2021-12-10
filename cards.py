@@ -12,8 +12,23 @@ class Card:
         print(f'{self.suit}{self.name}')
 
 
-card_1 = Card(8,3)
-card_2 = Card(12,2)
+class Player:
+    def __init__(self):
+        self.cards = []
+
+    def append(self, card):
+        self.cards.append(card)
+
+    def do_step(self, cards):
+        step = []
+        for card in cards:
+            j = self.cards.pop(card)
+            step.append(j)
+        return step
+
+
+card_1 = Card(8, 3)
+card_2 = Card(12, 2)
 
 deck = {}
 i = 1
