@@ -13,13 +13,14 @@ class Card:
     #     print(f'{self.suit}{self.name}')
 
 
-card_1 = Card(8, 3)
-card_2 = Card(12, 2)
+# card_1 = Card(8, 3, )
+# card_2 = Card(12, 2)
 
 deck = {}
 i = nums
 for suit in suits:
     for number in nums:
+
         deck.update({i: Card(number, suit)})
         i += 1
 
